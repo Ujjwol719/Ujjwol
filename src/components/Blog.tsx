@@ -37,7 +37,7 @@ const Blog: React.FC = () => {
             <div className="flex items-center space-x-6 text-sm text-gray-600 dark:text-gray-400 mb-6">
               <div className="flex items-center">
                 <User className="w-4 h-4 mr-2" />
-                <span>Ujjwal Parajuli</span>
+                <span>Ujjwol Parajuli</span>
               </div>
               <div className="flex items-center">
                 <Calendar className="w-4 h-4 mr-2" />
