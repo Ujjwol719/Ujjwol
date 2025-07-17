@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Facebook, Instagram, Linkedin, Github, ChevronUp } from 'lucide-react';
+import { Instagram, Linkedin, Github, ChevronUp } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const socialLinks = [
-    { icon: <Facebook className="w-5 h-5" />, href: 'https://facebook.com/', label: 'Facebook' },
-    { icon: <Instagram className="w-5 h-5" />, href: 'https://instagram.com/', label: 'Instagram' },
+    // Removed Facebook
+    { icon: <Instagram className="w-5 h-5" />, href: 'https://www.instagram.com/findingthyself2?igsh=MW8yd2hydG1id3Q4aw==', label: 'Instagram' },
     { icon: <Linkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/in/ujjwol-parajuli-3b9219317', label: 'LinkedIn' },
     { icon: <Github className="w-5 h-5" />, href: 'https://github.com/', label: 'GitHub' }
   ];
@@ -13,6 +13,12 @@ const Footer: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const quickLinks = [
+    'Home', 'About', 'Skills',
+    'Projects', 'Certificates', 'Blog',
+    'Contact'
+  ];
 
   return (
     <footer className="bg-gray-900 dark:bg-gray-950 text-white">
@@ -30,7 +36,7 @@ const Footer: React.FC = () => {
                 viewport={{ once: true }}
               >
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Ujjwal Parajuli
+                  Ujjwol Parajuli
                 </span>
               </motion.h3>
               <motion.p
@@ -40,12 +46,12 @@ const Footer: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                Data & Marketing Strategist passionate about turning data into actionable insights 
+                Data & Marketing Strategist passionate about turning data into actionable insights
                 and driving business growth through strategic marketing.
               </motion.p>
             </div>
 
-            {/* Quick Links */}
+            {/* Quick Links - 3x3 grid */}
             <div className="text-center">
               <motion.h4
                 className="text-lg font-semibold mb-4"
@@ -57,26 +63,25 @@ const Footer: React.FC = () => {
                 Quick Links
               </motion.h4>
               <motion.div
-                className="space-y-2"
+                className="grid grid-cols-3 gap-2"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                {['Home', 'About', 'Skills', 'Projects', 'Certificates', 'Blog', 'Contact'].map((link) => (
-                  <div key={link}>
-                    <button
-                      onClick={() => {
-                        const element = document.querySelector(`#${link.toLowerCase()}`);
-                        if (element) {
-                          element.scrollIntoView({ behavior: 'smooth' });
-                        }
-                      }}
-                      className="text-gray-400 hover:text-white transition-colors block"
-                    >
-                      {link}
-                    </button>
-                  </div>
+                {quickLinks.map((link) => (
+                  <button
+                    key={link}
+                    onClick={() => {
+                      const element = document.querySelector(`#${link.toLowerCase()}`);
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="text-gray-400 hover:text-white transition-colors block py-2"
+                  >
+                    {link}
+                  </button>
                 ))}
               </motion.div>
             </div>
@@ -142,9 +147,9 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            © 2024 Ujjwol Parajuli. All rights reserved.
+            © 2025 Ujjwol Parajuli. All rights reserved.
           </motion.p>
-          
+
           <motion.button
             onClick={scrollToTop}
             className="mt-4 md:mt-0 w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white hover:from-blue-700 hover:to-purple-700 transition-all duration-300"

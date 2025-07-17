@@ -32,7 +32,7 @@ const About: React.FC = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-96 h-96 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
             </div>
-            
+
             {/* Main Image Container */}
             <div className="relative z-10">
               <div className="w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center bg-gray-200 dark:bg-gray-700 relative">
@@ -82,20 +82,13 @@ const About: React.FC = () => {
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
                 Data Science Meets Marketing Excellence
               </h3>
-              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                I'm a passionate Data & Marketing Strategist with a unique blend of technical expertise and creative marketing vision.
-                With deep knowledge in machine learning, data analysis, and digital marketing, I help businesses transform raw data
-                into actionable strategies that drive growth.
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed italic font-[cursive]">
+                I'm a passionate Data & Marketing Strategist with a unique blend of technical expertise and creative marketing vision. With deep knowledge in machine learning, data analysis, and digital marketing, I help businesses transform raw data into actionable strategies that drive growth.
+                <br /><br />
+                My journey spans from building sophisticated ML models to crafting compelling marketing campaigns, always with the goal of creating meaningful impact through data-driven decision making.
+                <br /><br />
+                I thrive on solving complex problems and love collaborating with diverse teams to deliver innovative solutions. My curiosity drives me to continuously learn and adapt to new technologies, ensuring my work remains at the forefront of industry trends. Whether it's uncovering insights from data or designing strategies that resonate, I am dedicated to making a measurable difference.
               </p>
-              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                My journey spans from building sophisticated ML models to crafting compelling marketing campaigns,
-                always with the goal of creating meaningful impact through data-driven decision making.
-              </p>
-
-              {/* Inspirational Quote */}
-             
-
-              
             </div>
           </motion.div>
         </div>

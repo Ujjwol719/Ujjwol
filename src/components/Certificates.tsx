@@ -7,20 +7,20 @@ const Certificates: React.FC = () => {
     {
       title: 'Programming in Python',
       issuer: 'Python Software Foundation',
-      date: '2023',
+      date: 'Aug-2021',
       description: 'Comprehensive certification covering Python programming fundamentals, advanced concepts, and practical applications.',
-      image: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=500',
+      image: '/ujjwalpython.jpg',
       verifyLink: '#',
-      downloadLink: '#'
+      downloadLink: '/ujjwalpython.jpg' // <-- set to image path for download
     },
     {
       title: 'Machine Learning with Python',
       issuer: 'IBM / Coursera',
-      date: '2023',
+      date: 'June-2024',
       description: 'Advanced certification in machine learning algorithms, implementation, and practical applications using Python and scikit-learn.',
-      image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=500',
+      image: '/Machinelearning.jpg',
       verifyLink: '#',
-      downloadLink: '#'
+      downloadLink: '/Machinelearning.jpg' // <-- set to image path for download
     }
   ];
 
@@ -85,7 +85,7 @@ const Certificates: React.FC = () => {
                   <Award className="w-6 h-6" />
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   {cert.title}
@@ -99,7 +99,7 @@ const Certificates: React.FC = () => {
                 <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm leading-relaxed">
                   {cert.description}
                 </p>
-                
+
                 <div className="flex items-center justify-between">
                   <motion.a
                     href={cert.verifyLink}
@@ -110,12 +110,13 @@ const Certificates: React.FC = () => {
                     <ExternalLink className="w-4 h-4 mr-1" />
                     <span className="text-sm">Verify</span>
                   </motion.a>
-                  
+
                   <motion.a
                     href={cert.downloadLink}
                     className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 transition-colors"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    download
                   >
                     <Download className="w-4 h-4 mr-1" />
                     <span className="text-sm">Download</span>

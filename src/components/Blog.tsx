@@ -77,7 +77,7 @@ const Blog: React.FC = () => {
                   UP
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white">Ujjwal Parajuli</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white">Ujjwol Parajuli</h4>
                   <p className="text-gray-600 dark:text-gray-400">Data & Marketing Strategist</p>
                 </div>
               </div>

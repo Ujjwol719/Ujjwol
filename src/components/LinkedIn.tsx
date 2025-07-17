@@ -27,7 +27,7 @@ const LinkedIn: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                        Connect with Ujjwal
+                        Connect with Ujjwol
                       </h3>
                       <p className="text-gray-600 dark:text-gray-400">
                         Data & Marketing Strategist
@@ -36,7 +36,7 @@ const LinkedIn: React.FC = () => {
                   </div>
 
                   <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-md">
-                    Join my professional network and stay updated with the latest insights 
+                    Join my professional network and stay updated with the latest insights
                     in data science, machine learning, and digital marketing strategies.
                   </p>
 

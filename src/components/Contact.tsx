@@ -21,13 +21,13 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
-      
+
       // Reset success message after 3 seconds
       setTimeout(() => {
         setIsSubmitted(false);
@@ -39,20 +39,20 @@ const Contact: React.FC = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'ujjwalparajuli842@gmail.com',
-      link: 'mailto:ujjwalparajuli842@gmail.com'
+      value: 'ujjwolparajuli842@gmail.com',
+      link: 'mailto:ujjwolparajuli842@gmail.com'
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      value: '+91 8253339588',
-      link: 'tel:+918253339588'
+      value: '+1 8253339588',
+      link: 'tel:+18253339588'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
-      value: 'India',
-      link: '#'
+      value: '10738 101 Street, Edmonton',
+      link: 'https://www.google.com/maps?q=10738+101+Street+Edmonton'
     }
   ];
 
@@ -84,8 +84,8 @@ const Contact: React.FC = () => {
               Let's Connect
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              I'm always open to discussing new opportunities, collaborations, or 
-              just having a conversation about data science and marketing. 
+              I'm always open to discussing new opportunities, collaborations, or
+              just having a conversation about data science and marketing.
               Don't hesitate to reach out!
             </p>
 
@@ -109,6 +109,8 @@ const Contact: React.FC = () => {
                     <a
                       href={info.link}
                       className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      target={info.title === "Email" ? "_self" : "_blank"}
+                      rel={info.title === "Email" ? undefined : "noopener noreferrer"}
                     >
                       {info.value}
                     </a>
@@ -177,11 +179,10 @@ const Contact: React.FC = () => {
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-3 px-6 rounded-lg font-semibold text-white transition-all duration-300 ${
-                  isSubmitting
-                    ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
-                }`}
+                className={`w-full py-3 px-6 rounded-lg font-semibold text-white transition-all duration-300 ${isSubmitting
+                  ? 'bg-gray-400 cursor-not-allowed'
+                  : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
+                  }`}
                 whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                 whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
               >
