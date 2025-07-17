@@ -99,9 +99,9 @@ const Footer: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <p>ujjwalparajuli842@gmail.com</p>
+                <p>ujjwolparajuli842@gmail.com</p>
                 <p>+91 8253339588</p>
-                <p>India</p>
+                <p>Canada</p>
               </motion.div>
             </div>
           </div>
@@ -142,7 +142,7 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            © 2024 Ujjwal Parajuli. All rights reserved.
+            © 2024 Ujjwol Parajuli. All rights reserved.
           </motion.p>
           
           <motion.button
