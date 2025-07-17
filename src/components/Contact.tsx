@@ -18,21 +18,30 @@ const Contact: React.FC = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // Updated handleSubmit logic
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
+    const subject = `Contact Form Submission from ${formData.name}`;
+    const body = `Dear Ujjwol,
 
-      // Reset success message after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 3000);
-    }, 2000);
+You have received a new message from your website contact form:
+
+Name: ${formData.name}
+Email: ${formData.email}
+
+Message:
+${formData.message}
+
+---
+This message was sent from your portfolio website.`;
+
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=ujjwolparajuli842@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(gmailLink, '_blank');
+
+    setIsSubmitting(false);
+    setIsSubmitted(true);
   };
 
   const contactInfo = [
@@ -179,40 +188,15 @@ const Contact: React.FC = () => {
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-3 px-6 rounded-lg font-semibold text-white transition-all duration-300 ${isSubmitting
-                  ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
-                  }`}
-                whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                className={`w-full py-3 px-6 rounded-lg font-semibold text-white transition-all duration-300 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl`}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
-                {isSubmitting ? (
-                  <span className="flex items-center justify-center">
-                    <motion.div
-                      className="w-5 h-5 border-2 border-white border-t-transparent rounded-full mr-2"
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                    />
-                    Sending...
-                  </span>
-                ) : (
-                  <span className="flex items-center justify-center">
-                    <Send className="w-5 h-5 mr-2" />
-                    Send Message
-                  </span>
-                )}
+                <span className="flex items-center justify-center">
+                  <Send className="w-5 h-5 mr-2" />
+                  Send Message
+                </span>
               </motion.button>
-
-              {isSubmitted && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="flex items-center justify-center text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 p-4 rounded-lg"
-                >
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  Message sent successfully!
-                </motion.div>
-              )}
             </form>
           </motion.div>
         </div>
