@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
             ease: "linear"
           }}
         />
-        
+
         {/* Floating Geometric Shapes */}
         {[...Array(8)].map((_, i) => (
           <motion.div
@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
             }}
           />
         ))}
-        
+
         {/* Data Visualization Lines */}
         <motion.svg
           className="absolute inset-0 w-full h-full pointer-events-none"
@@ -116,12 +116,12 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6"
+            className="mt-16 text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 flex flex-row items-center justify-center gap-2"
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <motion.span 
+            <motion.span
               className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent relative inline-block"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
@@ -153,27 +153,13 @@ const Hero: React.FC = () => {
                 }}
               />
             </motion.span>
-            
-            <motion.span 
-              className="text-gray-800 dark:text-gray-200 ml-5"
+
+            <motion.span
+              className="text-gray-800 dark:text-gray-200"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
               Parajuli
-              {/* Floating Letter Animation */}
-              <motion.span
-                className="inline-block"
-                animate={{
-                  y: [0, -3, 0],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  delay: 2,
-                }}
-              >
-                i
-              </motion.span>
             </motion.span>
           </motion.h1>
 
@@ -208,7 +194,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <motion.span 
+            <motion.span
               className="font-mono"
               animate={{
                 textShadow: [
@@ -224,7 +210,7 @@ const Hero: React.FC = () => {
             >
               {displayedText}
             </motion.span>
-            <motion.span 
+            <motion.span
               className="animate-pulse"
               animate={{
                 opacity: [1, 0, 1],
@@ -279,7 +265,7 @@ const Hero: React.FC = () => {
               </motion.div>
               <span className="relative z-10">Download Resume</span>
             </motion.a>
-            
+
             <motion.button
               onClick={scrollToContact}
               className="inline-flex items-center px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 font-semibold rounded-full hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-all duration-300 relative overflow-hidden group"
@@ -316,7 +302,7 @@ const Hero: React.FC = () => {
               >
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-lg w-full h-full" />
               </motion.div>
-              
+
               <motion.div
                 className="relative z-10"
                 animate={{
@@ -332,7 +318,7 @@ const Hero: React.FC = () => {
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Data Science</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300">Python, ML, Deep Learning</p>
               </motion.div>
-              
+
               {/* Floating Particles */}
               <motion.div
                 className="absolute top-4 right-4 w-1 h-1 bg-blue-600 rounded-full"
@@ -360,7 +346,7 @@ const Hero: React.FC = () => {
               >
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-lg w-full h-full" />
               </motion.div>
-              
+
               <motion.div
                 className="relative z-10"
                 animate={{
@@ -377,7 +363,7 @@ const Hero: React.FC = () => {
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Analytics</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300">Power BI, MySQL, Reporting</p>
               </motion.div>
-              
+
               {/* Floating Particles */}
               <motion.div
                 className="absolute top-4 right-4 w-1 h-1 bg-purple-600 rounded-full"
@@ -405,7 +391,7 @@ const Hero: React.FC = () => {
               >
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-lg w-full h-full" />
               </motion.div>
-              
+
               <motion.div
                 className="relative z-10"
                 animate={{
@@ -422,7 +408,7 @@ const Hero: React.FC = () => {
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Marketing</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300">Digital Strategy, Direction</p>
               </motion.div>
-              
+
               {/* Floating Particles */}
               <motion.div
                 className="absolute top-4 right-4 w-1 h-1 bg-green-600 rounded-full"
