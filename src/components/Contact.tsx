@@ -60,8 +60,8 @@ This message was sent from your portfolio website.`;
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
-      value: '10738 101 Street, Edmonton',
-      link: 'https://www.google.com/maps?q=10738+101+Street+Edmonton'
+      value: '10738 101 Street, ',
+      link: ''
     }
   ];
 
